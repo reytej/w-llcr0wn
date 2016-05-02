@@ -4,6 +4,10 @@
 /// SIDE BAR LINKS                            ///
 ////////////////////////////////////////////////
 $nav = array();
+
+
+		/*$maintenance['uom'] = array('title'=>'UOM','path'=>'inv_maintenance/UOM','exclude'=>0);*/
+		$maintenance['contents'] = array('title'=>'Contents','path'=>'inv_maintenance/contents','exclude'=>0);
 		$maintenance['categories'] = array('title'=>'Categories','path'=>'inv_maintenance/categories','exclude'=>0);
 	$inventory['maintenance'] = array('title'=>'Maintenance','path'=>$maintenance,'exclude'=>0);
 $nav['inventory'] = array('title'=>'<i class="fa fa-archive"></i> <span>Inventory</span>','path'=>$inventory,'exclude'=>0);	
