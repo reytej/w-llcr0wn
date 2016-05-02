@@ -1,8 +1,8 @@
 /*
 MySQL Backup
 Source Server Version: 5.5.27
-Source Database: template
-Date: 4/29/2016 14:00:22
+Source Database: wallcrown
+Date: 5/2/2016 08:28:12
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -19,6 +19,18 @@ CREATE TABLE `ci_sessions` (
   `user_data` longtext NOT NULL,
   PRIMARY KEY (`session_id`),
   KEY `last_activity_idx` (`last_activity`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- ----------------------------
+--  Table structure for `contents`
+-- ----------------------------
+DROP TABLE IF EXISTS `contents`;
+CREATE TABLE `contents` (
+  `id` int(11) NOT NULL,
+  `code` varchar(150) DEFAULT NULL,
+  `category` varchar(150) DEFAULT NULL,
+  `content` longtext,
+  PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- ----------------------------
