@@ -2,14 +2,56 @@
 
 class Maintenance extends CI_Controller {
 	var $data = null;
-	public function categories(){
+	##################################################
+    ######              RIESELLE                ######
+    ##################################################
+
+     public function UOM(){
+        $this->load->helper('site/site_forms_helper');   
+        $th = array('Code','Name','Inactive');
+        $data = $this->syter->spawn('UOM');        
+        $data['code'] = create_rtable('uom','id','UOM-tbl',$th,null,true,'grid');
+        $data['load_js'] = 'inventory/maintenance';
+        $data['use_js'] = 'uomlist';
+        $data['page_no_padding'] = true;
+        $this->load->view('page',$data);
+    }
+    public function get_UOM($id=null,$asJson=true){
+        $post = array();
+        $page = "";
+        
+        $select = 'uom.*';
+        $join = array();
+        $where = array();
+        $order['name'] = 'desc';
+        $items = $this->site_model->get_tbl('uom',$where,$order,$join,true,$select);
+        $json = array();
+        if(count($items) > 0){
+            foreach ($items as $res) {
+                $json[$res->id] = array(
+                    "Title"=>$res->code,   
+                    "Name"=>$res->name,
+                    "inactive"=>($res->inactive == 0 ? 'No' : 'Yes')
+                );
+                $ids[] = $res->id;
+            }
+        }
+        if($asJson){
+            echo json_encode(array('rows'=>$json,'page'=>"",'post'=>$post));
+        }
+        else{
+            return array('rows'=>$json,'page'=>"",'post'=>$post);   
+        }
+    }
+
+    public function categories(){
         $this->load->helper('site/site_forms_helper');   
         $th = array('Code','Name','Date Added','Inactive');
         $data = $this->syter->spawn('categories');        
         $data['code'] = create_rtable('item_categories','cat_id','categories-tbl',$th,null,true,'grid');
         $data['load_js'] = 'inventory/maintenance';
         $data['use_js'] = 'categorylist';
-        $data['page_no_padding'] = true;
+        $data['page_no_padding']=true;
         $this->load->view('page',$data);
 	}
     public function get_categories($id=null,$asJson=true){
@@ -32,6 +74,8 @@ class Maintenance extends CI_Controller {
                 );
                 $ids[] = $res->cat_id;
             }
+
+            
         }
         if($asJson){
             echo json_encode(array('rows'=>$json,'page'=>"",'post'=>$post));
@@ -40,4 +84,50 @@ class Maintenance extends CI_Controller {
             return array('rows'=>$json,'page'=>"",'post'=>$post);   
         }
     }
+    
+##################################################
+######              NICKO                   ######
+##################################################
+
+
+    public function Content(){
+        $this->load->helper('site/site_forms_helper');   
+        $th = array('Code','Category','Caption');
+        $data = $this->syter->spawn('Content');        
+        $data['code'] = create_rtable('contents','id','content-tbl',$th,null,true,'grid');
+        $data['load_js'] = 'inventory/maintenance';
+        $data['use_js'] = 'contentlist';
+        $data['page_no_padding']=true;
+        $this->load->view('page',$data);
+    }
+    public function get_Content($id=null,$asJson=true){
+        $post = array();
+        $page = "";
+        
+        $select='contents.*';
+        $join = array();
+        $where = array();
+        $order['code'] = 'desc';
+        $items = $this->site_model->get_tbl('contents',$where,$order,$join,true,$select);
+        $json = array();
+        if(count($items) > 0){
+            foreach ($items as $res) {
+                $json[$res->id] = array(
+                    "code"=>$res->code,   
+                    "category"=>$res->category,   
+                    "caption"=>$res->content     
+                );
+                $ids[] = $res->id;
+            }
+        }
+
+        if($asJson){
+            echo json_encode(array('rows'=>$json,'page'=>"",'post'=>$post));
+        }
+        else{
+            return array('rows'=>$json,'page'=>"",'post'=>$post);  
+        }
+    }
+    
+
 }

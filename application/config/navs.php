@@ -1,14 +1,27 @@
 <?php  if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
 //////////////////////////////////////////////////
-/// SIDE BAR LINKS                            ///
+///				 SIDE BAR LINKS               ///
 ////////////////////////////////////////////////
+
 $nav = array();
 		$maintenance['categories'] = array('title'=>'Categories','path'=>'inv_maintenance/categories','exclude'=>0);
 	$inventory['maintenance'] = array('title'=>'Maintenance','path'=>$maintenance,'exclude'=>0);
 $nav['inventory'] = array('title'=>'<i class="fa fa-archive"></i> <span>Inventory</span>','path'=>$inventory,'exclude'=>0);	
 
-///ADMIN CONTROL////////////////////////////////
+$nav = array();
+		$maintenance['UOM'] = array('title'=>'UOM','path'=>'inv_maintenance/uom','exclude'=>0);
+	$inventory['maintenance'] = array('title'=>'Maintenance','path'=>$maintenance,'exclude'=>0);
+$nav['inventory'] = array('title'=>'<i class="fa fa-archive"></i> <span>Inventory</span>','path'=>$inventory,'exclude'=>0);	
+
+$nav = array();
+		$maintenance['Content'] = array('title'=>'Content','path'=>'inv_maintenance/Content','exclude'=>0);
+	$inventory['maintenance'] = array('title'=>'Maintenance','path'=>$maintenance,'exclude'=>0);
+$nav['inventory'] = array('title'=>'<i class="fa fa-archive"></i> <span>Inventory</span>','path'=>$inventory,'exclude'=>0);	
+
+//////////////////////////////////////////////////
+///				ADMIN CONTROL                 ///
+////////////////////////////////////////////////
 	$controlSettings['user'] = array('title'=>'Users','path'=>'user','exclude'=>0);
 	$controlSettings['roles'] = array('title'=>'Roles','path'=>'admin/roles','exclude'=>0);
 $nav['control'] = array('title'=>'<i class="fa fa-cogs"></i> <span>Admin Control</span>','path'=>$controlSettings,'exclude'=>0);
