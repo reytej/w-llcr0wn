@@ -15,7 +15,7 @@ $(document).ready(function(){
 								window.location = baseUrl+'inv_maintenance/contents_form';
 							 }
 		});
-	/*<?php elseif($use_js == 'uomlist'): ?>
+	<?php elseif($use_js == 'uomlist'): ?>
 		$('#uom-tbl').rTable({
 			loadFrom	: 	 'inv_maintenance/get_uom',
 			add			: 	 function(){
@@ -23,7 +23,7 @@ $(document).ready(function(){
 							 }
 		});
 	<?php endif; ?>
-*/
+
 
 
 });

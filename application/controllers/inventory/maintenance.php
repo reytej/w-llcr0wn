@@ -82,7 +82,7 @@ class Maintenance extends CI_Controller {
             return array('rows'=>$json,'page'=>"",'post'=>$post);   
         }
     }
-/*
+
 public function uom(){
         $this->load->helper('site/site_forms_helper');   
         $th = array('Code','Name','Inactive');
@@ -120,6 +120,6 @@ public function uom(){
             return array('rows'=>$json,'page'=>"",'post'=>$post);   
         }
     }
-*/
+
 
 }
