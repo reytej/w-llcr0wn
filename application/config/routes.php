@@ -40,10 +40,9 @@
 $route['default_controller'] = "site";
 $route['404_override'] = '';
 $route['login'] = "site/login";
-
-
-
-
+# INVENTORY #
+	$route['inv_maintenance'] = "inventory/maintenance";
+	$route['inv_maintenance/(:any)'] = "inventory/maintenance/$1";
 
 # DASHBOARD #
 	$route['dashboard'] = "core/dashboard";
