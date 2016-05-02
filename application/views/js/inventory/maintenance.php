@@ -21,9 +21,9 @@ $(document).ready(function(){
 			add			: 	 function(){
 								window.location = baseUrl+'inv_maintenance/content_form';
 							 }
-		});*/
+		});
 	<?php endif; ?>
-
+*/
 
 
 });
