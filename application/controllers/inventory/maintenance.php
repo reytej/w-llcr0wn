@@ -48,7 +48,7 @@ class Maintenance extends CI_Controller {
         $this->load->helper('site/site_forms_helper');   
         $th = array('Code','Category','Content');
         $data = $this->syter->spawn('contents');        
-        $data['code'] = create_rtable('contents','id','contents-tbl',$th,null,false,'list');
+        $data['code'] = create_rtable('contents','id','contents-tbl',$th,null,true,'list');
         $data['load_js'] = 'inventory/maintenance';
         $data['use_js'] = 'contentlist';
         $data['page_no_padding'] = true;
@@ -65,7 +65,6 @@ class Maintenance extends CI_Controller {
         
         $json = array();
         if(count($items) > 0){
-            // echo var_dump($items);
             foreach ($items as $res) {
                 $json[$res->id] = array(
                     "title"=>$res->code,   
@@ -121,5 +120,26 @@ public function uom(){
         }
     }
 
+    public function contents_form($data=array()){
+        $this->load->model('inventory/maintenance_model');
+        $this->load->helper('site/site_forms_helper');
+        $data = $this->syter->spawn('contents');
+        $data['code'] = makeContentsForm($data);
+        $data['load_js'] = "inventory/maintenance"; 
+        $data['use_js'] = "contentlist";
+        // $data['page_no_padding'] = true;
+        $this->load->view('page',$data);
+    }
+    public function contents_db($items=array()){
+        $this->load->model('inventory/maintenance_model');
+        $items = array(
+            'code' => $this->input->post('code'),
+            'category' => $this->input->post('category'),
+            'content' => $this->input->post('content')
+            );
+        // echo var_dump($items);
+        $this->maintenance_model->add_contents($items);
+        site_alert('Content added','success');
+        header('Location: ' . base_url() . '/inv_maintenance/contents?');     }
 
 }

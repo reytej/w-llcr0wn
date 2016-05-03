@@ -1163,4 +1163,22 @@ function staffDashboard(){
                         </section><!-- right col -->');
     return $CI->make->code();
 }
+function makeContentsForm($data=array()){
+    $CI =& get_instance();
+
+        $CI->make->sForm('contents_db',array('id'=>'contents_form'));
+            $CI->make->sDivRow();
+                $CI->make->sDivCol();    
+                    $CI->make->input('Code','code',iSetObj($data,'code'),'Code',array('class'=>'rOkay'));
+                    $CI->make->input('Category','category',iSetObj($data,'category'),'Category',array('class'=>'rOkay'));
+                    $CI->make->input('Content','content',iSetObj($data,'contents'),'Content',array('class'=>'rOkay'));
+                $CI->make->eDivCol();
+            $CI->make->sDivRow();
+            $CI->make->sDivCol();
+                $CI->make->button(fa('fa-floppy-o fa-fw').'Save',array('id'=>'save-btn','style'=>'margin-right:10px;float:right'),'success');
+                $CI->make->A(fa('fa-ban').' Cancel',base_url().'inv_maintenance/contents',array('class'=>'btn btn-primary','style'=>'float:right;margin-right:10px'));
+            $CI->make->eDivCol();
+        $CI->make->eForm();
+    return $CI->make->code();
+}
 ?>

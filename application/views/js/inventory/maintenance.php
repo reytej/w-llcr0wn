@@ -15,6 +15,19 @@ $(document).ready(function(){
 								window.location = baseUrl+'inv_maintenance/contents_form';
 							 }
 		});
+		$('#save-btn').click(function(){
+			// $("#contents_form").rOkay({
+			// 	btn_load 	 	: 	$('#save-btn'),
+			// 	btn_load_remove : 	false,
+			// 	onComplete	 	: 	function(data){
+			// 						// alert(data);
+			// 						window.location = baseUrl+'inv_maintenance/contents';
+			// 						// window.location.href = baseUrl+'inv_maintenance/contents';
+
+			// 						}
+			// });
+			// return false;
+		});
 	<?php elseif($use_js == 'uomlist'): ?>
 		$('#uom-tbl').rTable({
 			loadFrom	: 	 'inv_maintenance/get_uom',
