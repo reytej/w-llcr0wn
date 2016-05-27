@@ -8,5 +8,11 @@ class Maintenance_model extends CI_Model{
 		$id = $this->db->insert_id();
 		return $id;
 	}
+	public function add_category($data=array()){
+		$this->db->set('create_date', 'NOW()', FALSE);
+		$this->db->insert('item_categories',$data);
+		$id = $this->db->insert_id();
+		return $id;
+	}
 }
 ?>

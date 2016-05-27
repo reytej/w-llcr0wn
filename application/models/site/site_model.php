@@ -341,8 +341,151 @@ class Site_model extends CI_Model{
 	public function update_profile($user,$id){
 		$this->db->where('id', $id);
 		$this->db->update('users', $user);
-
 		return $this->db->last_query();
 	}
+    function wallpaper_get()
+    {
+        $query = $this->db->get('wallpaper');
+        $query_result = $query->result();
+        return $query_result;
+    }
+    function carpets_get()
+    {
+        $query = $this->db->get('carpets');
+        $query_result = $query->result();
+        return $query_result;
+    }
+    function window_covering_get()
+    {
+        $query = $this->db->get('window_coverings');
+        $query_result = $query->result();
+        return $query_result;
+    }
+    function pcv_strips_get()
+    {
+        $query = $this->db->get('pcv_strips');
+        $query_result = $query->result();
+        return $query_result;
+    }
+    function swing_door_get()
+    {
+        $query = $this->db->get('swing_door');
+        $query_result = $query->result();
+        return $query_result;
+    }
+    function hi_speed_door_get()
+    {
+        $query = $this->db->get('hi_speed_door');
+        $query_result = $query->result();
+        return $query_result;
+    }
+    function anti_static_panel_get()
+    {
+        $query = $this->db->get('anti_static_panel');
+        $query_result = $query->result();
+        return $query_result;
+    }
+    function categories_get()
+    {
+		$query = $this->db->get('item_categories');
+		$query_result = $query->result();
+		return $query_result;
+    }
+    function content_get()
+    {
+		$query = $this->db->get('contents');
+		$query_result = $query->result();
+		return $query_result;
+    }
+
+    function show_edit_contents($id=0)
+    {
+      $results = $this->db->get_where('contents',array('id'=>$id));
+      return $results->result();
+    }
+
+    function edit_contents_record($id,$contents){
+        $this->db->where('id' , $id);
+        $this->db->update('contents' , $contents);
+    }
+
+    function edit_contents_record2($id,$contents){
+        $this->db->where('id' , $id);
+        $this->db->update('contents' , $contents);
+    }
+    function show_edit_categories($id=0)
+    {
+      $results = $this->db->get_where('item_categories',array('cat_id'=>$id));
+      return $results->result();
+    }
+
+    function edit_categories_record($id,$contents){
+        $this->db->where('cat_id' , $id);
+        $this->db->update('item_categories' , $contents);
+    }
+    function show_edit_wallpaper($id=0)
+    {
+      $results = $this->db->get_where('wallpaper',array('id'=>$id));
+      return $results->result();
+    }
+
+    function edit_wallpaper_record($id,$contents){
+        $this->db->where('id' , $id);
+        $this->db->update('wallpaper' , $contents);
+    }
+    function show_edit_carpets($id=0)
+    {
+      $results = $this->db->get_where('carpets',array('id'=>$id));
+      return $results->result();
+    }
+    function edit_carpets_record($id,$contents){
+        $this->db->where('id' , $id);
+        $this->db->update('carpets' , $contents);
+    }
+    function show_edit_window_coverings($id=0)
+    {
+      $results = $this->db->get_where('window_coverings',array('id'=>$id));
+      return $results->result();
+    }
+    function edit_window_coverings_record($id,$contents){
+        $this->db->where('id' , $id);
+        $this->db->update('window_coverings' , $contents);
+    }
+    function show_edit_pcv_strips($id=0)
+    {
+      $results = $this->db->get_where('pcv_strips',array('id'=>$id));
+      return $results->result();
+    }
+    function edit_pcv_strips_record($id,$contents){
+        $this->db->where('id' , $id);
+        $this->db->update('pcv_strips' , $contents);
+    }
+    function show_edit_swing_door($id=0)
+    {
+      $results = $this->db->get_where('swing_door',array('id'=>$id));
+      return $results->result();
+    }
+    function edit_swing_door_record($id,$contents){
+        $this->db->where('id' , $id);
+        $this->db->update('swing_door' , $contents);
+    }
+    function show_edit_hi_speed_door($id=0)
+    {
+      $results = $this->db->get_where('hi_speed_door',array('id'=>$id));
+      return $results->result();
+    }
+    function edit_hi_speed_door_record($id,$contents){
+        $this->db->where('id' , $id);
+        $this->db->update('hi_speed_door' , $contents);
+    }
+    function show_edit_anti_static_panel($id=0)
+    {
+      $results = $this->db->get_where('anti_static_panel',array('id'=>$id));
+      return $results->result();
+    }
+    function edit_anti_static_panel_record($id,$contents){
+        $this->db->where('id' , $id);
+        $this->db->update('anti_static_panel' , $contents);
+    }
 }
 ?>

@@ -43,6 +43,9 @@ $route['login'] = "site/login";
 # INVENTORY #
 	$route['inv_maintenance'] = "inventory/maintenance";
 	$route['inv_maintenance/(:any)'] = "inventory/maintenance/$1";
+# site #
+	$route['site_1'] = "site_1/site_1";
+	$route['site_1/(:any)'] = "site_1/site_1/$1";	
 
 # DASHBOARD #
 	$route['dashboard'] = "core/dashboard";

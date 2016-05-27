@@ -4,6 +4,7 @@ class Site extends CI_Controller {
 		$data = $this->syter->spawn('dashboard');
 		$data['code'] = "";
 		$this->load->view('page',$data);
+		
 	}
 	public function login(){
 		$this->load->helper('site/login_helper');
@@ -13,6 +14,7 @@ class Site extends CI_Controller {
 		$data['load_js'] = 'site/login';
 		$data['use_js'] = 'loginJs';
 		$this->load->view('login',$data);
+		
 	}
 	public function go_login(){
 		$this->load->model('site/site_model');

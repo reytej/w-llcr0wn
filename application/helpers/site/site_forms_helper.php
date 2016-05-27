@@ -1181,4 +1181,24 @@ function makeContentsForm($data=array()){
         $CI->make->eForm();
     return $CI->make->code();
 }
+function makecategoryForm($data=array()){
+    $CI =& get_instance();
+
+        $CI->make->sForm('category_db',array('id'=>'category_form'));
+            $CI->make->sDivRow();
+                $CI->make->sDivCol();    
+                    $CI->make->input('Code','code',iSetObj($data,'code'),'Code',array('class'=>'rOkay'));
+                    $CI->make->input('Name','name',iSetObj($data,'category'),'Name',array('class'=>'rOkay'));
+                    $CI->make->input('Description','description',iSetObj($data,'description'),'Description',array('class'=>'rOkay'));
+                  //  $CI->make->input('Date Added','create_date',iSetObj($data,'create_date'),'Date added',array('class'=>'rOkay'));
+                $CI->make->eDivCol();
+            $CI->make->sDivRow();
+            $CI->make->sDivCol();
+                $CI->make->button(fa('fa-floppy-o fa-fw').'Save',array('id'=>'category-btn','style'=>'margin-right:10px;float:right'),'success');
+                $CI->make->A(fa('fa-ban').' Cancel',base_url().'inv_maintenance/contents',array('class'=>'btn btn-primary','style'=>'float:right;margin-right:10px'));
+            $CI->make->eDivCol();
+        $CI->make->eForm();
+    return $CI->make->code();
+}
+
 ?>

@@ -1,0 +1,89 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!--
+Template Name: PhotoProwess
+Author: <a href="http://www.os-templates.com/">OS Templates</a>
+Author URI: http://www.os-templates.com/
+Licence: Free to use under our free template licence terms
+Licence URI: http://www.os-templates.com/template-terms
+-->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>PhotoProwess | Gallery</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<link rel="stylesheet" href="../layout/styles/layout.css" type="text/css" />
+<script type="text/javascript" src="../layout/scripts/jquery.min.js"></script>
+<script type="text/javascript" src="../layout/scripts/jquery.ui.min.js"></script>
+<script type="text/javascript" src="../layout/scripts/jquery.defaultvalue.js"></script>
+<script type="text/javascript" src="../layout/scripts/jquery.scrollTo-min.js"></script>
+<script type="text/javascript">
+$(document).ready(function () {
+    $("#fullname, #validemail, #message").defaultvalue("Full Name", "Email Address", "Message");
+    $('#shout a').click(function () {
+        var to = $(this).attr('href');
+        $.scrollTo(to, 1200);
+        return false;
+    });
+    $('a.topOfPage').click(function () {
+        $.scrollTo(0, 1200);
+        return false;
+    });
+    $("#tabcontainer").tabs({
+        event: "click"
+    });
+    $("a[rel^='prettyPhoto']").prettyPhoto({
+        theme: 'dark_rounded'
+    });
+});
+</script>
+<!-- prettyPhoto -->
+<link rel="stylesheet" href="../layout/scripts/prettyphoto/prettyPhoto.css" type="text/css" />
+<script type="text/javascript" src="../layout/scripts/prettyphoto/jquery.prettyPhoto.js"></script>
+<script type="text/javascript">
+$(document).ready(function() {
+    $("a[rel^='prettyPhoto']").prettyPhoto({
+        theme: 'dark_rounded',
+        overlay_gallery: false,
+        social_tools: false
+    });
+});
+</script>
+<!-- / prettyPhoto -->
+
+
+
+
+</head>
+<body id="top">
+
+
+
+
+
+
+
+
+    <h1>Gallery Category Name Here</h1>
+    <div class="gallery clear">
+      <ul>
+        <li class="first"><img src="../images/demo/gallery/572x330.gif" alt="Title Text" /></li>
+        <li><a href="../images/demo/gallery/572x330.gif" rel="prettyPhoto[gallery1]" title="Image 1"><img src="../images/demo/gallery/174x150.gif" alt="Title Text" /></a></li>
+        <li><a href="../images/demo/gallery/572x330.gif" rel="prettyPhoto[gallery1]" title="Image 2"><img src="../images/demo/gallery/174x150.gif" alt="Title Text" /></a></li>
+        <li><a href="../images/demo/gallery/572x330.gif" rel="prettyPhoto[gallery1]" title="Image 3"><img src="../images/demo/gallery/174x150.gif" alt="Title Text" /></a></li>
+        <li><a href="../images/demo/gallery/572x330.gif" rel="prettyPhoto[gallery1]" title="Image 4"><img src="../images/demo/gallery/174x150.gif" alt="Title Text" /></a></li>
+        <li class="first"><a href="../images/demo/gallery/572x330.gif" rel="prettyPhoto[gallery1]" title="Image 5"><img src="../images/demo/gallery/174x150.gif" alt="Title Text" /></a></li>
+        <li><a href="../images/demo/gallery/572x330.gif" rel="prettyPhoto[gallery1]" title="Image 6"><img src="../images/demo/gallery/174x150.gif" alt="Title Text" /></a></li>
+        <li><a href="../images/demo/gallery/572x330.gif" rel="prettyPhoto[gallery1]" title="Image 7"><img src="../images/demo/gallery/174x150.gif" alt="Title Text" /></a></li>
+        <li><a href="../images/demo/gallery/572x330.gif" rel="prettyPhoto[gallery1]" title="Image 8"><img src="../images/demo/gallery/174x150.gif" alt="Title Text" /></a></li>
+        <li><a href="../images/demo/gallery/572x330.gif" rel="prettyPhoto[gallery1]" title="Image 9"><img src="../images/demo/gallery/174x150.gif" alt="Title Text" /></a></li>
+        <li class="first"><a href="../images/demo/gallery/572x330.gif" rel="prettyPhoto[gallery1]" title="Image 10"><img src="../images/demo/gallery/174x150.gif" alt="Title Text" /></a></li>
+        <li><a href="../images/demo/gallery/572x330.gif" rel="prettyPhoto[gallery1]" title="Image 11"><img src="../images/demo/gallery/174x150.gif" alt="Title Text" /></a></li>
+        <li><a href="../images/demo/gallery/572x330.gif" rel="prettyPhoto[gallery1]" title="Image 12"><img src="../images/demo/gallery/174x150.gif" alt="Title Text" /></a></li>
+        <li><a href="../images/demo/gallery/572x330.gif" rel="prettyPhoto[gallery1]" title="Image 13"><img src="../images/demo/gallery/174x150.gif" alt="Title Text" /></a></li>
+        <li><a href="../images/demo/gallery/572x330.gif" rel="prettyPhoto[gallery1]" title="Image 14"><img src="../images/demo/gallery/174x150.gif" alt="Title Text" /></a></li>
+      </ul>
+    </div>
+    <!-- ####################################################################################################### -->
+    
+  
+</body>
+</html>
