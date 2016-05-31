@@ -10,34 +10,34 @@
 									<div class="wrap-col">
 										<div class="contact">
 											<div id="contact_form">
-												<?php foreach ($carpets as $record): ?>
-													<form name="form1" id="ff" method="post" action="<?php echo base_url() . "site_1/carpets_delete"?>">
+												<?php foreach ($anti_static_panel as $record): ?>
+													<form name="form1" id="ff" method="post" action="<?php echo base_url() . "site_1/delete_anti_static_panel"?>">
 														<label class="row">
 															<div class="col-1-2">
 																<div class="wrap-col">
-																	<input type="hidden" name="carpetsid" id="ff" required="required" value="<?php echo $record->id; ?>"/>
+																	<input type="hidden" name="anti_static_panelid" id="ff" required="required" value="<?php echo $record->id; ?>"/>
 																</div>
 															</div>
 														</label>
 														<label class="row">
 															<div class="col-1-2">
 																<div class="wrap-col">
-																	Image Name:<input type="text" name="carpetsimage" id="ff" placeholder="Enter image Name" required="required" value="<?php echo $record->image; ?>"/>
+																	Image Name:<input type="text" name="anti_static_panelimage" id="ff" placeholder="Enter image Name" required="required" value="<?php echo $record->image; ?>"/>
 																</div>
 															</div>
 														</label>
 														<label class="row">
 															<div class="wrap-col">
-																Title:<input type="text" name="carpetstitle"  placeholder="Enter Title" required="required" value="<?php echo $record->title; ?>"/>
+																Title:<input type="text" name="anti_static_paneltitle"  placeholder="Enter Title" required="required" value="<?php echo $record->title; ?>"/>
 															</div>
 														</label>
 														<label class="row">
 															<div class="wrap-col">
-																Description:<textarea name="carpetsdescription"  class="form-control" rows="4" cols="25" required="required"
+																Description:<textarea name="anti_static_paneldescription"  class="form-control" rows="4" cols="25" required="required"
 																placeholder="Description" value=""><?php echo $record->description; ?></textarea>
 															</div>
 														</label>
-														<center><input class="sendButton" type="submit" id="submit"name="edit_carpets" value="Submit"></center>
+														<center><input class="sendButton" type="submit" id="submit"name="delete_anti_static_panel" value="Submit"></center>
 													</form>
 												<?php endforeach; ?>
 											</div>

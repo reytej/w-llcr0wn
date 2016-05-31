@@ -11,7 +11,7 @@
 										<div class="contact">
 											<div id="contact_form">
 												<?php foreach ($carpets as $record): ?>
-													<form name="form1" id="ff" method="post" action="<?php echo base_url() . "site_1/carpets_delete"?>">
+													<form name="form1" id="ff" method="post" action="<?php echo base_url() . "site_1/carpets_edit"?>">
 														<label class="row">
 															<div class="col-1-2">
 																<div class="wrap-col">

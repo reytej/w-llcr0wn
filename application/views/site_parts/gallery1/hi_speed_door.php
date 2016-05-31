@@ -19,7 +19,10 @@
 												'.$row->description.'';?>
 											<div align="right">
 												<a href="<?php echo base_url() . 'site_1/hi_speed_door_edit/' . $row->id; ?>"><font color="ee7600 ">[EDIT]</font></a>
-											</div>													
+											</div>		
+											<div align="right">
+												<a href="<?php echo base_url() . 'site_1/delete_hi_speed_door/' . $row->id; ?>"><font color="ee7600 ">[DELETE]</font></a>
+											</div>																								
 											</div>
 									</div>
 								</div>

@@ -1,7 +1,5 @@
 
-			<?php for ($row = 0; $row <= 0; $row++):?>
-				<ARTICLE><CENTER><font color="ee7600 "><h1><?php echo $categories[$row]->cat_name ;?></h1></font></CENTER></ARTICLE>
-			<?php endfor; ?>
+				<ARTICLE><CENTER><font color="ee7600 "><h1><?php echo $categories[0]->cat_name ;?></h1></font></CENTER></ARTICLE>
 		<section class="content-box box-1 box-style-1"><!--Start Box-->
 			<div class="zerogrid">
 				<div class="row">

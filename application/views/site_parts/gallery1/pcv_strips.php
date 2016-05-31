@@ -20,7 +20,9 @@
 											<div align="right">
 												<a href="<?php echo base_url() . 'site_1/pcv_strips_edit/' . $row->id; ?>"><font color="ee7600 ">[EDIT]</font></a>
 											</div>
-
+											<div align="right">
+												<a href="<?php echo base_url() . 'site_1/pcv_strips_delete/' . $row->id; ?>"><font color="ee7600 ">[DELETE]</font></a>
+											</div>
 											</div>
 									</div>
 								</div>

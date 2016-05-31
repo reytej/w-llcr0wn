@@ -487,5 +487,34 @@ class Site_model extends CI_Model{
         $this->db->where('id' , $id);
         $this->db->update('anti_static_panel' , $contents);
     }
+    function delete_wallpaper_record($id,$delete){
+        $this->db->where('id' , $id);
+        $this->db->delete('wallpaper' , $delete);
+    }
+    function delete_carpets_record($id,$delete){
+        $this->db->where('id' , $id);
+        $this->db->delete('carpets' , $delete);
+    }
+    function delete_window_covering_record($id,$delete){
+        $this->db->where('id' , $id);
+        $this->db->delete('window_coverings' , $delete);
+    }
+    function delete_pcv_strips_record($id,$contents){
+        $this->db->where('id' , $id);
+        $this->db->delete('pcv_strips' , $contents);
+    }
+    function delete_swing_door_record($id,$contents){
+        $this->db->where('id' , $id);
+        $this->db->delete('swing_door' , $contents);
+    }
+    function delete_hi_speed_door_record($id,$contents){
+        $this->db->where('id' , $id);
+        $this->db->delete('hi_speed_door' , $contents);
+    }
+    function delete_anti_static_panel_record($id,$contents){
+        $this->db->where('id' , $id);
+        $this->db->delete('anti_static_panel' , $contents);
+    }
+
 }
 ?>

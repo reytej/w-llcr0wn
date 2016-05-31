@@ -19,7 +19,9 @@
 											<div align="right">
 												<a href="<?php echo base_url() . 'site_1/carpets_edit/' . $row->id; ?>"><font color="ee7600 ">[EDIT]</font></a>
 											</div>
-
+											<div align="right">
+												<a href="<?php echo base_url() . 'site_1/carpets_delete/' . $row->id; ?>"><font color="ee7600 ">[DELETE]</font></a>
+											</div>
 										</div>
 									</div>
 								</div>

@@ -5,7 +5,7 @@
 <header >
 	<div class="zerogrid">
 		<div class="wrap-header">
-			<div class="logo t-center"><a href="../site_1"><img src="<?php echo base_url(); ?>images/wallcrownlogo.png"height="500" width="366"/></a></div>	
+			<div class="logo t-center"><a href="<?php echo base_url().'../wallcr0wn/site_1'; ?>"><img src="<?php echo base_url(); ?>images/Wallcrown Logo.jpg"height="700" width="450"/></a></div>	
 				<div id='cssmenu' class="align-center">
 					<ul>
 						<li><a href='<?php echo base_url().'../wallcr0wn/site_1'; ?>'><span>HOME</span></a></li>

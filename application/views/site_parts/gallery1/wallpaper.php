@@ -1,6 +1,4 @@
-
 			<ARTICLE><CENTER><font color="ee7600 "><h1>WALLPAPER</h1></font></CENTER></ARTICLE>
-
 		<section class="content-box box-1 box-style-1"><!--Start Box-->
 			<div class="zerogrid">
 				<div class="row">
@@ -20,12 +18,13 @@
 											<div align="right">
 												<a href="<?php echo base_url() . 'site_1/wallpaper_edit/' . $row->id; ?>"><font color="ee7600 ">[EDIT]</font></a>
 											</div>
+											<div align="right">
+												<a href="<?php echo base_url() . 'site_1/wallpaper_delete/' . $row->id; ?>"><font color="ee7600 ">[DELETE]</font></a>
+											</div>											
 											</div>
 									</div>
 								</div>
 							</div>
 						<?php endforeach; ?>
-
 		</section>
 		<br>
-		

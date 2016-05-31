@@ -1,6 +1,5 @@
-			<?php for ($row = 0; $row <= 0; $row++):?>
-				<ARTICLE><CENTER><font color="ee7600 "><h1><?php echo $categories[$row]->cat_name ;?></h1></font></CENTER></ARTICLE>
-			<?php endfor; ?>
+
+				<ARTICLE><CENTER><font color="ee7600 "><h1><?php echo $categories[0]->cat_name ;?></h1></font></CENTER></ARTICLE>
 	<section id="container">
 		<div class="wrap-container clearfix">
 			<div id="main-content">
@@ -30,9 +29,8 @@
 						<?php endfor; ?>
 
 
-			<?php for ($row = 1; $row <= 1; $row++):?>
-				<ARTICLE><CENTER><font color="ee7600 "><h1><?php echo $categories[$row]->cat_name ;?></h1></font></CENTER></ARTICLE>
-			<?php endfor; ?>
+				<ARTICLE><CENTER><font color="ee7600 "><h1><?php echo $categories[1]->cat_name ;?></h1></font></CENTER></ARTICLE>
+
 					<?php for ($row = 5; $row <= 8; $row++):?>
 						<article>
 							<div class="col-1-2 f-right">

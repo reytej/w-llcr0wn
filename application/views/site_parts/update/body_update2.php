@@ -33,12 +33,6 @@
 																Title:<input type="text" name="contenttitle"  placeholder="Enter Title" required="required" value="<?php echo $record->title; ?>"/>
 															</div>
 														</label>
-
-
-
-
-
-
 														<center><input class="sendButton" type="submit" id="submit"name="update_content" value="Submit"></center>
 													</form>
 												<?php endforeach; ?>

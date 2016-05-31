@@ -20,16 +20,17 @@
 								<div class="wrap-col ">
 									<div class="item">
 										<div class="zoom-container">
-											<img src="<?php echo base_url() .'images/'.$contents[$row]->image;?>" />
-										</div>
+											<a href="<?php echo base_url() . 'site_1/' . $contents[$row]->link; ?>">
+												<img src="<?php echo base_url() .'images/'.$contents[$row]->image;?>" />
+											</div>
 
-											<div class="item-content">
-												<h3 class="item-header"><a href="<?php echo base_url() . 'site_1/' . $contents[$row]->link; ?>">
-												<?php echo '<font color="ee7600 ">'.$contents[$row]->title.'</a></h3></font>
-												'.$contents[$row]->description.'';?>
-												<br>
-													<div align="right">
-														<a href="<?php echo base_url() . 'site_1/update/' . $contents[$row]->id; ?>"><font color="ee7600 ">[EDIT]</font></a>
+												<div class="item-content">
+													<h3 class="item-header">
+													<?php echo '<font color="ee7600 ">'.$contents[$row]->title.'</a></h3></font>
+													'.$contents[$row]->description.'';?>
+													<br>
+														<div align="right">
+															<a href="<?php echo base_url() . 'site_1/update/' . $contents[$row]->id; ?>"><font color="ee7600 ">[EDIT]</font></a>
 													</div>
 										</div>
 									</div>
